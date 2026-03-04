@@ -42,11 +42,34 @@ final List<Recipe> sampleRecipes = [
     instructions:
         '1. Wash and chop the green lettuce.\n'
         '2. Place lettuce in a large bowl.\n'
-        '3. Add the sliced olive along with any other chopped/sliced veggies.\n'
-        '4. Add toasted cubic bread and grated any favorite cheese.\n'
-        '5. Pour Caesar dressing over the salad.\n'
-        '6. Toss gently to coat everything evenly.\n'
-        '7. Add grilled chicken if desired.\n'
-        '8. Sprinkle black pepper and serve fresh.',
+        '3. Add the sliced olives along with any other chopped/sliced veggies.\n'
+        '4. Add sliced/diced boiled eggs if desired.\n'
+        '5. Add toasted cubic breads and grated any favorite cheese.\n'
+        '6. Pour Caesar dressing over the salad.\n'
+        '7. Toss gently to coat everything evenly.\n'
+        '8. Add grilled chicken if desired.\n'
+        '9. Sprinkle black pepper and serve fresh.',
+  ),
+
+  Recipe(
+    name: 'Subway Style Sandwich',
+    imagePath: 'assets/images/sandwich.jpg',
+    ingredients: [
+      'Sub sandwich bread',
+      'Turkey or ham slices',
+      'Lettuce',
+      'Tomatoes',
+      'Cucumber or sliced pickles',
+      'Onion',
+      'Cheese slices',
+      'Mayonnaise or mustard'
+    ],
+    instructions:
+        '1. Slice the sub bread lengthwise on a chopping board.\n'
+        '2. Add turkey or ham slices.\n'
+        '3. Place cheese on top of the meat.\n'
+        '4. Add lettuce, tomatoes, cucumber/sliced pickles, and onion.\n'
+        '5. Spread mayonnaise or mustard.\n'
+        '7. Close and wrap the sandwich in a paper/aluminum foil and serve.',
   ),
 ];
