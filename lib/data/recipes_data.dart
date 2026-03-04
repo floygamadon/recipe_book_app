@@ -72,4 +72,33 @@ final List<Recipe> sampleRecipes = [
         '5. Spread mayonnaise or mustard.\n'
         '7. Close and wrap the sandwich in a paper/aluminum foil and serve.',
   ),
+
+  Recipe(
+    name: 'Creamy Buldak Ramen',
+    imagePath: 'assets/images/ramen.jpg',
+    ingredients: [
+      'Any Samyang Buldak instant ramen',
+      'Ham or any type of meats',
+      'Green onion',
+      'Garlic clove',
+      'Boiled egg',
+      'Egg yolk',
+      'Dried seaweed (optional)',
+      'Cheese slices',
+      'Mayonnaise'
+    ],
+    instructions:
+        '1. Boil ramen in the pot until the soft and elastic.\n'
+        '2. Boil egg in the separate pot at least 5-15 minutes.\n'
+        '2. Put seasoning packets (salt and oil or sauce) from the ramen into a bowl.\n'
+        '3. Put egg yolk and mayonnaise in the bowl as well.\n'
+        '4. Chop green onion and garlic clove\n'
+        '5. Put chopped green onion and garlic into the bowl.\n'
+        '6. Pour little hot water from boiling the noodle to the bowl and mix the ingredients together.\n'
+        '7. Place cooked ramen into the bowl and mix again.\n'
+        '8. Soak boiled egg in cold water in 3-5 minutes before peeling the shell.\n'
+        '9. Place boil egg, meat or hams on top of the noodle.\n'
+        '10. Place cheese and dried seaweed on top of the meat.\n'
+        '11. Use a fork and chopsticks to serve.',
+  ),
 ];
