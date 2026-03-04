@@ -101,4 +101,26 @@ final List<Recipe> sampleRecipes = [
         '10. Place cheese and dried seaweed on top of the meat.\n'
         '11. Use a fork and chopsticks to serve.',
   ),
+  
+  Recipe(
+    name: 'Chocolate Milkshake',
+    imagePath: 'assets/images/milkshake.jpg',
+    ingredients: [
+      '3 scoops vanilla ice cream',
+      '1 cup milk',
+      '1 to 3 tbsp chocolate syrup',
+      'Whipped cream',
+      'Cocoa powder (optional)',
+      'Cherry (optional)',
+      'Chocolate chips or Oreo crumbs (optional)',
+    ],
+    instructions:
+        '1. Add ice cream (more scoops for thicker texture), milk, and chocolate syrup to a blender.\n'
+        '2. Blend until smooth and creamy.\n'
+        '3. Taste and add more chocolate syrup if desired.\n'
+        '4. Pour into a tall glass or cup.\n'
+        '5. Top with whipped cream, and chocolate chips or Oreo Crumbs.\n'
+        '6. Top with cocoa powder, and cherry if desired.\n'
+        '7. Serve immediately and best with other entrees.',
+  ),
 ];
