@@ -13,14 +13,22 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              recipe.imagePath,
-              height: 220,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-
-            const SizedBox(height: 12),
+    Padding(
+      padding: const EdgeInsets.all(12),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Container(
+          color: Colors.white,
+          child: Image.asset(
+            recipe.imagePath,
+            height: 250,
+            width: double.infinity,
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    ),
+    const SizedBox(height: 10),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
