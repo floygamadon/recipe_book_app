@@ -113,14 +113,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
 
                     // navigate to details
-                    onTap: () {
-                      Navigator.push(
+                    onTap: () async {
+                      await Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) =>
-                              DetailsScreen(recipe: recipe),
+                          builder: (_) => DetailsScreen(recipe: recipe),                  
                         ),
                       );
+                      
+                      // Rebuild HomeScreen so the heart updates after returning
+                      setState(() {});
                     },
                   ),
                 );
