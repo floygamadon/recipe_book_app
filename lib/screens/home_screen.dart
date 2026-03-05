@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import '../data/recipes_data.dart';
 import 'details_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +49,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
 
-          // Light overlay to improve readability
+          // Light overlay
           Positioned.fill(
             child: Container(
               color: Colors.black.withOpacity(0.15),
@@ -56,6 +62,7 @@ class HomeScreen extends StatelessWidget {
             child: ListView.builder(
               itemCount: sampleRecipes.length,
               itemBuilder: (context, index) {
+
                 final recipe = sampleRecipes[index];
 
                 return Card(
@@ -64,30 +71,54 @@ class HomeScreen extends StatelessWidget {
                     horizontal: 16,
                     vertical: 8,
                   ),
+
                   child: ListTile(
+
+                    // recipe image
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
-                      child: Container(
+                      child: SizedBox(
                         width: 60,
                         height: 60,
                         child: Image.asset(
                           recipe.imagePath,
                           fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
+
+                    // recipe name
                     title: Text(
                       recipe.name,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
 
-                    trailing: const Icon(Icons.chevron_right),
+                    // ❤️ favorite button
+                    trailing: IconButton(
+                      icon: Icon(
+                        recipe.isFavorite
+                            ? Icons.favorite
+                            : Icons.favorite_border,
+                        color: recipe.isFavorite
+                            ? Colors.red
+                            : Colors.grey,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          recipe.isFavorite = !recipe.isFavorite;
+                        });
+                      },
+                    ),
 
+                    // navigate to details
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => DetailsScreen(recipe: recipe),
+                          builder: (_) =>
+                              DetailsScreen(recipe: recipe),
                         ),
                       );
                     },
