@@ -22,7 +22,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
         actions: [
 
-          // ❤️ Favorite button with background + shadow
+          // Favorite button with background + shadow
           Container(
             margin: const EdgeInsets.only(right: 12),
             decoration: BoxDecoration(
